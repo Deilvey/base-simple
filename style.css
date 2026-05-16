@@ -23,15 +23,6 @@ body {
     color: var(--text-dark);
     overflow-x: hidden;
     transition: all 0.3s ease;
-    cursor: url('cursor.png') 16 16, auto;
-}
-
-a, button, .btn-primary, .social-btn, .faq-question, .dot {
-    cursor: url('cursor.png') 16 16, pointer !important;
-}
-
-input, textarea {
-    cursor: url('cursor.png') 16 16, text !important;
 }
 
 body.light-mode {
