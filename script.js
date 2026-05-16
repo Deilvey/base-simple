@@ -220,20 +220,69 @@ async function updatePrices() {
     const prices = {
         eth: (2500 + Math.random() * 100).toFixed(2),
         btc: (45000 + Math.random() * 1000).toFixed(2),
+        doge: (0.15 + Math.random() * 0.05).toFixed(4),
+        pepe: (0.000012 + Math.random() * 0.000005).toFixed(8),
+        shib: (0.000025 + Math.random() * 0.000010).toFixed(8),
+        brett: (0.085 + Math.random() * 0.03).toFixed(4),
+        toshi: (0.00045 + Math.random() * 0.0002).toFixed(6),
+        mochi: (0.0012 + Math.random() * 0.0005).toFixed(6),
         ethChange: (Math.random() * 10 - 5).toFixed(2),
-        btcChange: (Math.random() * 10 - 5).toFixed(2)
+        btcChange: (Math.random() * 10 - 5).toFixed(2),
+        dogeChange: (Math.random() * 20 - 10).toFixed(2),
+        pepeChange: (Math.random() * 30 - 15).toFixed(2),
+        shibChange: (Math.random() * 25 - 12).toFixed(2),
+        brettChange: (Math.random() * 40 - 20).toFixed(2),
+        toshiChange: (Math.random() * 35 - 17).toFixed(2),
+        mochiChange: (Math.random() * 45 - 22).toFixed(2)
     };
     
+    // Update ETH
     document.getElementById('eth-price').textContent = prices.eth;
-    document.getElementById('btc-price').textContent = prices.btc;
-    
     const ethChange = document.getElementById('eth-change');
     ethChange.textContent = (prices.ethChange > 0 ? '+' : '') + prices.ethChange + '%';
     ethChange.className = 'change ' + (prices.ethChange > 0 ? 'positive' : 'negative');
     
+    // Update BTC
+    document.getElementById('btc-price').textContent = prices.btc;
     const btcChange = document.getElementById('btc-change');
     btcChange.textContent = (prices.btcChange > 0 ? '+' : '') + prices.btcChange + '%';
     btcChange.className = 'change ' + (prices.btcChange > 0 ? 'positive' : 'negative');
+    
+    // Update DOGE
+    document.getElementById('doge-price').textContent = prices.doge;
+    const dogeChange = document.getElementById('doge-change');
+    dogeChange.textContent = (prices.dogeChange > 0 ? '+' : '') + prices.dogeChange + '%';
+    dogeChange.className = 'change ' + (prices.dogeChange > 0 ? 'positive' : 'negative');
+    
+    // Update PEPE
+    document.getElementById('pepe-price').textContent = prices.pepe;
+    const pepeChange = document.getElementById('pepe-change');
+    pepeChange.textContent = (prices.pepeChange > 0 ? '+' : '') + prices.pepeChange + '%';
+    pepeChange.className = 'change ' + (prices.pepeChange > 0 ? 'positive' : 'negative');
+    
+    // Update SHIB
+    document.getElementById('shib-price').textContent = prices.shib;
+    const shibChange = document.getElementById('shib-change');
+    shibChange.textContent = (prices.shibChange > 0 ? '+' : '') + prices.shibChange + '%';
+    shibChange.className = 'change ' + (prices.shibChange > 0 ? 'positive' : 'negative');
+    
+    // Update BRETT (Base chain memecoin)
+    document.getElementById('brett-price').textContent = prices.brett;
+    const brettChange = document.getElementById('brett-change');
+    brettChange.textContent = (prices.brettChange > 0 ? '+' : '') + prices.brettChange + '%';
+    brettChange.className = 'change ' + (prices.brettChange > 0 ? 'positive' : 'negative');
+    
+    // Update TOSHI (Base chain memecoin)
+    document.getElementById('toshi-price').textContent = prices.toshi;
+    const toshiChange = document.getElementById('toshi-change');
+    toshiChange.textContent = (prices.toshiChange > 0 ? '+' : '') + prices.toshiChange + '%';
+    toshiChange.className = 'change ' + (prices.toshiChange > 0 ? 'positive' : 'negative');
+    
+    // Update MOCHI (Base chain memecoin)
+    document.getElementById('mochi-price').textContent = prices.mochi;
+    const mochiChange = document.getElementById('mochi-change');
+    mochiChange.textContent = (prices.mochiChange > 0 ? '+' : '') + prices.mochiChange + '%';
+    mochiChange.className = 'change ' + (prices.mochiChange > 0 ? 'positive' : 'negative');
 }
 updatePrices();
 setInterval(updatePrices, 5000);
